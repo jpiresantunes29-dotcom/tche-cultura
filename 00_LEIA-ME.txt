@@ -1,0 +1,76 @@
+TCHÊ & CULTURA — GRUPO 5 — VERSÃO FINAL 4.3 (16/11/2026)
+=========================================================
+
+Projeto fechado. Tudo nas pastas 01 a 05 bate entre si: requisitos, especificações,
+diagramas, SQL, documentos e site. A pasta 05 tem as ferramentas de compilação do
+Tailwind e de recompilação do estilo. As versões antigas não fazem parte desta entrega.
+
+REFERÊNCIA DE TUDO: Requisitos v3.3 e Especificações de Caso de Uso v3.3.
+
+01 Gestao do Projeto
+  Escopo (15/10)
+
+02 Engenharia de Requisitos
+  Requisitos - v3.3.xlsx ............ RF-01 a RF-26, RNF-01 a RNF-05, RastreabilidadeBD
+  Especificações de Caso de Uso - v3.3.xlsx
+  Diagrama de Casos de Uso.jpeg ..... 26 casos de uso = 26 RF
+
+03 Banco de Dados
+  1 Diagramas ....................... Conceitual v4 e Lógico v4 (.drawio editável + .png)
+  2 Documentos ...................... Análise Funcional v4 e Projeto Fase 2 v4 (.docx + .pdf)
+  3 SQL ............................. tche_cultura_v4.sql (único script, testado no MySQL 8.0)
+    testes/ ......................... dados "[TESTE]" para os testes (preparar, povoar 27 UFs, remover)
+  4 Entrega Views Functions Procedures
+                                      Relatório de Evidências v4 e Views (João) v4
+
+04 Desenvolvimento Web
+  index.php, tailwind.css, mapa_brasil.json, tche_cultura_v4.sql, imagens/, arquivos/
+  (ver o LEIA-ME da pasta: como rodar, contas de teste e onde cada requisito aparece)
+
+05 Conferencia e Ferramentas
+  tailwind.config.js, in.css ........ recompilação do Tailwind (ver LEIA-ME)
+
+Senha de todos os usuários de teste do banco: Tche@2026 (hash bcrypt, custo 10)
+
+O QUE MUDOU NA v4.3 / v3.3 (16/11/2026) — fechamento do projeto
+  + site: mapa com as 27 UFs e lista de estados; mensagens E1/E2/E5; pesquisa com campo vazio
+    e aviso de busca lenta (2 s); botão de audiodescrição; correções de acessibilidade
+    e terracota mais escura para contraste
+  + Requisitos e Especificações v3.3: UC-03 ganhou o fluxo de exceção E5, o E3.1 foi
+    corrigido
+
+O QUE MUDOU NO BANCO (v3 -> v4), em resumo
+  + artigo_academico (RF-20), pesquisador.linha_pesquisa (RF-21)
+  + atendimento no lugar de interacao (RF-08: agente de IA OU atendente humano)
+  + atividade_interativa.docente_id e quiz inicial sem conteúdo (RF-05, RF-15)
+  + recurso_complementar.docente_id e tipo 'mapa externo' (RF-10, RF-18)
+  + contribuicao: situação 'rascunho', motivo_rejeicao, editor_id, data_edicao (UC-16, UC-23, RF-24)
+  + acesso: id próprio, usuário opcional e termo_pesquisado (UC-02, UC-03, RF-25)
+  + feedback ligado à avaliação (RF-07); avaliacao sem comentário
+  + 13 restrições CHECK; procedure nova sp_editar_conteudo_moderacao
+  ~ historia_local -> acontecimento_historico (mesmo nome da planilha)
+  - agendamento, usuario.idioma_preferido, estado.efeito_sonoro (cortados na v3.1)
+
+O QUE MUDOU NA v4.1 (site)
+  + site reescrito sobre o banco v4: as 9 categorias, as 4 procedures com a assinatura nova,
+    as views, as functions e o trigger
+  + telas novas: pesquisa, ajuda (Tchê Bot ou atendente), atividades, área do docente,
+    rascunho de contribuição, edição na moderação, estatísticas, feedbacks e acessibilidade
+  + acervo de teste ampliado: 68 conteúdos nas 5 regiões e nas 9 categorias
+  ~ pontuação das tentativas sempre de 0 a 100 (o Quiz do Blue grava acertos x 20)
+
+O QUE MUDOU NA v4.2 (14/11/2026) — nada mais ficou simplificado
+  + jogo da memória de verdade: 12 cartas que viram em 3D e casam conteúdo com estado (RF-11)
+  + quebra-cabeça de verdade: mosaico 3x3 montado trocando as peças de lugar (RF-13)
+  + anexo de material com upload de arquivo (PDF, Word, PowerPoint, imagem, áudio e vídeo),
+    até 10 MB, com conferência do conteúdo do arquivo, e não só da extensão (RF-18)
+  + atendimento humano completo: o administrador responde pelo painel e a resposta aparece
+    para o usuário na Central de Ajuda e em "Minhas mensagens" (RF-08)
+    -> banco: atendimento.resposta, atendimento.data_resposta e ck_atendimento_resposta
+  + artigo acadêmico lido dentro do site, com resumo, texto, desenvolvimento técnico e
+    referências; o PDF virou um download a mais (RF-02, RF-20, RF-21)
+  + PDFs dos artigos e ilustração do ponto turístico gerados a partir do próprio acervo
+  + Tailwind compilado em tailwind.css: o site abre formatado sem internet (o CDN fica de reserva)
+  + conferência nova (item 8): todo arquivo citado pelo banco precisa existir na pasta do site
+  ~ musica.audio fica NULL no acervo de teste: o projeto não distribui gravação de terceiros;
+    quando o grupo puser um arquivo na pasta arquivos/, o botão "Ouvir" aparece sozinho

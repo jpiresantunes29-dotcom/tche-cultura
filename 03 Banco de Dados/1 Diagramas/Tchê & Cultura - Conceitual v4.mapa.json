@@ -1,0 +1,641 @@
+{
+ "entidades": {
+  "USUÁRIO": {
+   "tabela": "usuario",
+   "atributos": [
+    {
+     "conceitual": "id_usuario",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "nome",
+     "coluna": "nome"
+    },
+    {
+     "conceitual": "email",
+     "coluna": "email"
+    },
+    {
+     "conceitual": "senha",
+     "coluna": "senha"
+    },
+    {
+     "conceitual": "telefone",
+     "coluna": "telefone"
+    },
+    {
+     "conceitual": "data_nascimento",
+     "coluna": "data_nascimento"
+    },
+    {
+     "conceitual": "classificacao",
+     "coluna": "classificacao"
+    }
+   ]
+  },
+  "PÚBLICO EM GERAL": {
+   "tabela": "publico_geral",
+   "atributos": []
+  },
+  "PESQUISADOR": {
+   "tabela": "pesquisador",
+   "atributos": [
+    {
+     "conceitual": "tempo_experiencia",
+     "coluna": "tempo_experiencia"
+    },
+    {
+     "conceitual": "instituicao_trabalho",
+     "coluna": "instituicao_trabalho"
+    },
+    {
+     "conceitual": "linha_pesquisa",
+     "coluna": "linha_pesquisa"
+    }
+   ]
+  },
+  "ADMINISTRADOR": {
+   "tabela": "administrador",
+   "atributos": [
+    {
+     "conceitual": "area_responsabilidade",
+     "coluna": "area_responsabilidade"
+    },
+    {
+     "conceitual": "data_inicio",
+     "coluna": "data_inicio"
+    }
+   ]
+  },
+  "ESTUDANTE": {
+   "tabela": "estudante",
+   "atributos": [
+    {
+     "conceitual": "instituicao",
+     "coluna": "instituicao"
+    },
+    {
+     "conceitual": "nivel_escolaridade",
+     "coluna": "nivel_escolaridade"
+    }
+   ]
+  },
+  "DOCENTE": {
+   "tabela": "docente",
+   "atributos": [
+    {
+     "conceitual": "certificado_exp",
+     "coluna": "certificado_exp"
+    },
+    {
+     "conceitual": "instituicao_trabalho",
+     "coluna": "instituicao_trabalho"
+    }
+   ]
+  },
+  "ATENDIMENTO": {
+   "tabela": "atendimento",
+   "atributos": [
+    {
+     "conceitual": "id_atendimento",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "canal",
+     "coluna": "canal"
+    },
+    {
+     "conceitual": "data_hora",
+     "coluna": "data_hora"
+    },
+    {
+     "conceitual": "topico",
+     "coluna": "topico"
+    },
+    {
+     "conceitual": "resposta",
+     "coluna": "resposta"
+    },
+    {
+     "conceitual": "data_resposta",
+     "coluna": "data_resposta"
+    }
+   ]
+  },
+  "AGENTE DE IA": {
+   "tabela": "agente_ia",
+   "atributos": [
+    {
+     "conceitual": "id_agente",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "nome",
+     "coluna": "nome"
+    },
+    {
+     "conceitual": "funcao",
+     "coluna": "funcao"
+    },
+    {
+     "conceitual": "base_conhecimento",
+     "coluna": "base_conhecimento"
+    }
+   ]
+  },
+  "ACESSO": {
+   "tabela": "acesso",
+   "atributos": [
+    {
+     "conceitual": "id_acesso",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "data_hora",
+     "coluna": "data_hora"
+    },
+    {
+     "conceitual": "pagina_visitada",
+     "coluna": "pagina_visitada"
+    },
+    {
+     "conceitual": "termo_pesquisado",
+     "coluna": "termo_pesquisado"
+    }
+   ]
+  },
+  "AVALIAÇÃO": {
+   "tabela": "avaliacao",
+   "atributos": [
+    {
+     "conceitual": "nota",
+     "coluna": "nota"
+    },
+    {
+     "conceitual": "data_avaliacao",
+     "coluna": "data_avaliacao"
+    }
+   ]
+  },
+  "FEEDBACK": {
+   "tabela": "feedback",
+   "atributos": [
+    {
+     "conceitual": "id_feedback",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "tipo",
+     "coluna": "tipo"
+    },
+    {
+     "conceitual": "texto",
+     "coluna": "texto"
+    },
+    {
+     "conceitual": "data_envio",
+     "coluna": "data_envio"
+    },
+    {
+     "conceitual": "status",
+     "coluna": "status"
+    }
+   ]
+  },
+  "CONTRIBUIÇÃO": {
+   "tabela": "contribuicao",
+   "atributos": [
+    {
+     "conceitual": "data_envio",
+     "coluna": "data_envio"
+    },
+    {
+     "conceitual": "status",
+     "coluna": "status"
+    },
+    {
+     "conceitual": "data_revisao",
+     "coluna": "data_revisao"
+    },
+    {
+     "conceitual": "motivo_rejeicao",
+     "coluna": "motivo_rejeicao"
+    },
+    {
+     "conceitual": "data_edicao",
+     "coluna": "data_edicao"
+    }
+   ]
+  },
+  "ATIVIDADE INTERATIVA": {
+   "tabela": "atividade_interativa",
+   "atributos": [
+    {
+     "conceitual": "id_atividade",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "tipo",
+     "coluna": "tipo"
+    },
+    {
+     "conceitual": "titulo",
+     "coluna": "titulo"
+    },
+    {
+     "conceitual": "descricao",
+     "coluna": "descricao"
+    }
+   ]
+  },
+  "RECURSO COMPLEMENTAR": {
+   "tabela": "recurso_complementar",
+   "atributos": [
+    {
+     "conceitual": "id_recurso",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "tipo",
+     "coluna": "tipo"
+    },
+    {
+     "conceitual": "titulo",
+     "coluna": "titulo"
+    },
+    {
+     "conceitual": "endereco",
+     "coluna": "endereco"
+    },
+    {
+     "conceitual": "descricao",
+     "coluna": "descricao"
+    }
+   ]
+  },
+  "CONTEÚDO CULTURAL": {
+   "tabela": "conteudo_cultural",
+   "atributos": [
+    {
+     "conceitual": "id_conteudo",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "tipo",
+     "coluna": "tipo"
+    },
+    {
+     "conceitual": "data_cadastro",
+     "coluna": "data_cadastro"
+    },
+    {
+     "conceitual": "texto_simplificado",
+     "coluna": "texto_simplificado"
+    },
+    {
+     "conceitual": "texto_tecnico",
+     "coluna": "texto_tecnico"
+    },
+    {
+     "conceitual": "referencias",
+     "coluna": "referencias"
+    }
+   ]
+  },
+  "ESTADO": {
+   "tabela": "estado",
+   "atributos": [
+    {
+     "conceitual": "id_estado",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "nome",
+     "coluna": "nome"
+    },
+    {
+     "conceitual": "sigla",
+     "coluna": "sigla"
+    },
+    {
+     "conceitual": "regiao",
+     "coluna": "regiao"
+    }
+   ]
+  },
+  "CULINÁRIA": {
+   "tabela": "culinaria",
+   "atributos": [
+    {
+     "conceitual": "nome_prato",
+     "coluna": "nome_prato"
+    },
+    {
+     "conceitual": "receita",
+     "coluna": "receita"
+    },
+    {
+     "conceitual": "descricao",
+     "coluna": "descricao"
+    },
+    {
+     "conceitual": "ingredientes",
+     "coluna": "culinaria_ingrediente.ingrediente"
+    }
+   ]
+  },
+  "MÚSICA": {
+   "tabela": "musica",
+   "atributos": [
+    {
+     "conceitual": "nome",
+     "coluna": "nome"
+    },
+    {
+     "conceitual": "artista",
+     "coluna": "artista"
+    },
+    {
+     "conceitual": "genero_musical",
+     "coluna": "genero_musical"
+    },
+    {
+     "conceitual": "audio",
+     "coluna": "audio"
+    },
+    {
+     "conceitual": "letra",
+     "coluna": "letra"
+    }
+   ]
+  },
+  "LITERATURA": {
+   "tabela": "literatura",
+   "atributos": [
+    {
+     "conceitual": "titulo",
+     "coluna": "titulo"
+    },
+    {
+     "conceitual": "genero",
+     "coluna": "genero"
+    },
+    {
+     "conceitual": "trecho",
+     "coluna": "trecho"
+    }
+   ]
+  },
+  "VARIAÇÃO LINGUÍSTICA": {
+   "tabela": "variacao_linguistica",
+   "atributos": [
+    {
+     "conceitual": "expressao",
+     "coluna": "expressao"
+    },
+    {
+     "conceitual": "significado",
+     "coluna": "significado"
+    },
+    {
+     "conceitual": "exemplo_uso",
+     "coluna": "exemplo_uso"
+    }
+   ]
+  },
+  "PONTO TURÍSTICO": {
+   "tabela": "ponto_turistico",
+   "atributos": [
+    {
+     "conceitual": "nome",
+     "coluna": "nome"
+    },
+    {
+     "conceitual": "localizacao",
+     "coluna": "localizacao"
+    },
+    {
+     "conceitual": "historia",
+     "coluna": "historia"
+    },
+    {
+     "conceitual": "descricao",
+     "coluna": "descricao"
+    },
+    {
+     "conceitual": "imagem",
+     "coluna": "imagem"
+    }
+   ]
+  },
+  "INCIDÊNCIA NOMINAL": {
+   "tabela": "incidencia_nominal",
+   "atributos": [
+    {
+     "conceitual": "termo",
+     "coluna": "termo"
+    },
+    {
+     "conceitual": "significado",
+     "coluna": "significado"
+    },
+    {
+     "conceitual": "origem",
+     "coluna": "origem"
+    }
+   ]
+  },
+  "CURIOSIDADE": {
+   "tabela": "curiosidade",
+   "atributos": [
+    {
+     "conceitual": "titulo",
+     "coluna": "titulo"
+    },
+    {
+     "conceitual": "curiosidade",
+     "coluna": "curiosidade"
+    },
+    {
+     "conceitual": "categoria",
+     "coluna": "categoria"
+    },
+    {
+     "conceitual": "descricao",
+     "coluna": "descricao"
+    }
+   ]
+  },
+  "ARTIGO ACADÊMICO": {
+   "tabela": "artigo_academico",
+   "atributos": [
+    {
+     "conceitual": "titulo",
+     "coluna": "titulo"
+    },
+    {
+     "conceitual": "resumo",
+     "coluna": "resumo"
+    },
+    {
+     "conceitual": "area_pesquisa",
+     "coluna": "area_pesquisa"
+    },
+    {
+     "conceitual": "arquivo",
+     "coluna": "arquivo"
+    }
+   ]
+  },
+  "ACONTECIMENTO HISTÓRICO": {
+   "tabela": "acontecimento_historico",
+   "atributos": [
+    {
+     "conceitual": "titulo",
+     "coluna": "titulo"
+    },
+    {
+     "conceitual": "periodo_historico",
+     "coluna": "periodo_historico"
+    },
+    {
+     "conceitual": "local",
+     "coluna": "local"
+    },
+    {
+     "conceitual": "descricao",
+     "coluna": "descricao"
+    }
+   ]
+  },
+  "AUTOR": {
+   "tabela": "autor",
+   "atributos": [
+    {
+     "conceitual": "id_autor",
+     "coluna": "id"
+    },
+    {
+     "conceitual": "nome",
+     "coluna": "nome"
+    }
+   ]
+  }
+ },
+ "relacionamentos": {
+  "Solicita": {
+   "tabela": "atendimento",
+   "fk": "usuario_id",
+   "atributos": []
+  },
+  "Responde": {
+   "tabela": "atendimento",
+   "fk": "agente_id",
+   "atributos": []
+  },
+  "Registra": {
+   "tabela": "acesso",
+   "fk": "usuario_id",
+   "atributos": []
+  },
+  "Visualiza": {
+   "tabela": "acesso",
+   "fk": "conteudo_id",
+   "atributos": []
+  },
+  "Faz": {
+   "tabela": "avaliacao",
+   "fk": "usuario_id",
+   "atributos": []
+  },
+  "Sobre": {
+   "tabela": "avaliacao",
+   "fk": "conteudo_id",
+   "atributos": []
+  },
+  "Gera": {
+   "tabela": "feedback",
+   "fk": "usuario_id,conteudo_id",
+   "atributos": []
+  },
+  "Favorita": {
+   "tabela": "favorito",
+   "fk": "usuario_id,conteudo_id",
+   "atributos": [
+    {
+     "conceitual": "data_inclusao",
+     "coluna": "data_inclusao"
+    }
+   ]
+  },
+  "Envia": {
+   "tabela": "contribuicao",
+   "fk": "usuario_id",
+   "atributos": []
+  },
+  "Refere-se a": {
+   "tabela": "contribuicao",
+   "fk": "conteudo_id",
+   "atributos": []
+  },
+  "Revisa": {
+   "tabela": "contribuicao",
+   "fk": "admin_id",
+   "atributos": []
+  },
+  "Edita": {
+   "tabela": "contribuicao",
+   "fk": "editor_id",
+   "atributos": []
+  },
+  "Realiza": {
+   "tabela": "tentativa",
+   "fk": "estudante_id,atividade_id",
+   "atributos": [
+    {
+     "conceitual": "data_hora",
+     "coluna": "data_hora"
+    },
+    {
+     "conceitual": "pontuacao",
+     "coluna": "pontuacao"
+    }
+   ]
+  },
+  "Cria": {
+   "tabela": "atividade_interativa",
+   "fk": "docente_id",
+   "atributos": []
+  },
+  "Baseia-se em": {
+   "tabela": "atividade_interativa",
+   "fk": "conteudo_id",
+   "atributos": []
+  },
+  "Anexa": {
+   "tabela": "recurso_complementar",
+   "fk": "docente_id",
+   "atributos": []
+  },
+  "Complementa": {
+   "tabela": "recurso_complementar",
+   "fk": "conteudo_id",
+   "atributos": []
+  },
+  "Pertence": {
+   "tabela": "conteudo_cultural",
+   "fk": "estado_id",
+   "atributos": []
+  },
+  "Escrita por": {
+   "tabela": "literatura",
+   "fk": "autor_id",
+   "atributos": []
+  },
+  "Abrange": {
+   "tabela": "acontecimento_estado",
+   "fk": "acontecimento_id,estado_id",
+   "atributos": []
+  }
+ }
+}

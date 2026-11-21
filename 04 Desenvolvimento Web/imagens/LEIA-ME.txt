@@ -1,0 +1,11 @@
+PASTA imagens/
+===============
+Fotos dos pontos turísticos, com o mesmo nome da coluna ponto_turistico.imagem.
+
+Já vem aqui:
+  museu.jpg ... ilustração do Museu Oscar Niemeyer feita pelo próprio projeto (não é foto de
+                terceiros). É ela que o site usa na ficha do conteúdo e no quebra-cabeça.
+
+Para trocar por uma foto de verdade, basta substituir o arquivo mantendo o nome. Para outros
+pontos turísticos, grave o nome do arquivo na coluna imagem e ponha o arquivo aqui. Enquanto
+não houver foto, o site desenha sozinho uma arte com as cores da região — nunca fica quebrado.

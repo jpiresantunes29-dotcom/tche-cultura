@@ -1,0 +1,16 @@
+CONFERÊNCIA E FERRAMENTAS
+
+Esta pasta contém os arquivos de configuração do Tailwind CSS usados para
+compilar o estilo do site (tailwind.css da pasta 04).
+
+Se alguém mexer nas classes do index.php, recompile o CSS para incluir
+as novas classes:
+
+  npm install tailwindcss@3
+  npx tailwindcss -c "05 Conferencia e Ferramentas/tailwind.config.js" \
+      -i "05 Conferencia e Ferramentas/in.css" \
+      -o "04 Desenvolvimento Web/tailwind.css" --minify
+
+O tailwind.config.js já traz as cores da v4.3 (terracota escura e cores do mapa).
+
+Quem preferir editar os diagramas à mão no draw.io pode: os .drawio são editáveis.

@@ -1,0 +1,15 @@
+PASTA arquivos/
+================
+PDFs dos artigos acadêmicos, com o mesmo nome da coluna artigo_academico.arquivo.
+
+Já vem aqui:
+  artigo-contestado.pdf .... gerado a partir do próprio acervo (conteúdo 11)
+  artigo-tropeirismo.pdf ... gerado a partir do próprio acervo (conteúdo 68)
+  (os dois podem ser refeitos com 05 Conferencia e Ferramentas/gerar_anexos.py)
+
+materiais/ ... criada pelo site quando um docente envia um arquivo pela "Área do docente"
+               (RF-18). No XAMPP essa pasta precisa ter permissão de escrita.
+
+Áudio das músicas (coluna musica.audio): no acervo de teste fica NULL, porque o projeto não
+distribui gravação de terceiros. Se o grupo puser um arquivo aqui e gravar o nome na coluna,
+o botão "Ouvir" aparece sozinho na ficha do conteúdo.

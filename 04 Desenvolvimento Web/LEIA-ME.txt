@@ -1,0 +1,113 @@
+SITE TCHÊ & CULTURA — versão 4.3 (16/11/2026)
+==============================================
+
+O site é UM arquivo só (index.php) com a API em PHP, o HTML, o CSS e o JavaScript.
+Ele usa o banco v4 (tche_cultura_v4.sql, o mesmo da pasta 03 Banco de Dados/3 SQL).
+
+ARQUIVOS DESTA PASTA
+  index.php ............. o site inteiro (API + HTML + CSS + JavaScript)
+  mapa_brasil.json ...... contorno das 27 UFs do mapa (servido por index.php?api=mapa).
+                          Fonte: @svg-maps/brazil 2.0.0 (VemDev), licença CC BY 4.0,
+                          https://github.com/VemDev/svg-maps
+  tailwind.css .......... estilo compilado; com ele o site abre formatado SEM internet
+                          (se o arquivo faltar, o index.php busca o Tailwind pelo CDN)
+  tche_cultura_v4.sql ... cópia do banco, usada pelo botão "Instalar banco de dados"
+  imagens/ .............. fotos dos pontos turísticos (coluna ponto_turistico.imagem)
+  arquivos/ ............. PDFs dos artigos (coluna artigo_academico.arquivo) e, dentro de
+                          materiais/, os arquivos que os docentes enviarem pelo site
+
+ONDE O CÓDIGO ESTÁ DIVIDIDO (procure por "PARTE" dentro do index.php)
+  PARTE 1 a 8 ... PHP: configuração, conexão, validação, permissões, consulta do acervo,
+                  instalação do banco, geradores das atividades e upload de materiais
+  PARTE 9 ....... PHP: todas as ações da API (index.php?api=...)
+  PARTE 10 ...... HTML e CSS da página
+  PARTE 11 ...... JavaScript: navegação, mapa (carregarMapa, selecionarUF, abrirEstado),
+                  acervo, pesquisa, audiodescrição e ajuda
+  PARTE 12 ...... JavaScript: conta, contribuição, painel do admin e atividades
+
+O QUE O SITE FAZ NA v4.3 (para bater com os Casos de Teste v2.0)
+  UC-01  mapa com as 27 UFs: destaque ao passar o cursor, clique abre a região, "ver em todos
+         os estados" lista as UFs. Mapa não carregou -> mensagem de erro com botão de nova
+         tentativa e lista de estados (E2). Estado sem conteúdo publicado -> aviso (E5).
+  UC-02  8 categorias do RF-02 por estado (Artigo Acadêmico tem seção própria).
+  UC-03  pesquisa: campo vazio mantém o foco e avisa; sem resultado sugere termos; mostra o
+         aviso "buscando..." se passar de 2 s (RNF-03).
+  RNF-01 audiodescrição: botão "Ouvir" lê o conteúdo em voz alta (speechSynthesis).
+  RNF-02 contraste: terracota escurecida (#B8491C) para os textos; 0 erros axe-core em 21 telas.
+  RNF-05 cards como <article> com título-botão, aria-labels e ordem de foco.
+
+COMO RODAR (XAMPP)
+  1. Copie esta pasta inteira para C:\xampp\htdocs\tche (index.php + tche_cultura_v4.sql).
+  2. No painel do XAMPP, ligue Apache e MySQL (MySQL 8.0.16 ou mais novo, por causa dos CHECK).
+  3. Abra http://localhost/tche/
+  4. Na primeira vez, o site mostra "Banco de dados não instalado". Clique em
+     "Instalar banco de dados": ele roda as seções 1 a 5 do script (estrutura, dados,
+     views, functions, trigger e procedures). As seções 6 e 7 (testes) não entram.
+     Também dá para importar o tche_cultura_v4.sql inteiro pelo phpMyAdmin.
+  Se o seu MySQL tiver senha ou outra porta, ajuste DB_HOST / DB_PORT / DB_USER / DB_PASS
+  no topo do index.php.
+
+CONTAS DE TESTE (senha de todas: Tche@2026)
+  ana@email.com ......... Estudante       (atividades, Quiz do Blue com pontuação salva)
+  carlos@email.com ...... Docente         (contribui, cria atividades, anexa materiais)
+  marta@email.com ....... Pesquisadora    (contribui, envia artigo, vê sua linha de pesquisa)
+  joana@email.com ....... Público geral   (avalia, favorita, envia correção, pede ajuda)
+  admin@email.com ....... Administrador   (moderação, edição, relatório, estatísticas)
+
+ONDE CADA REQUISITO APARECE NO SITE (Requisitos v3.3)
+  RF-01 Mapa por região ........... mapa clicável (também por teclado) + "Explorar Região"
+  RF-02 Conteúdo por estado ....... janela de detalhe; só aparece conteúdo publicado
+  RF-03 Pesquisa .................. lupa no topo; sem resultado sugere até 5 termos (UC-03)
+  RF-04 Menu ...................... topo: pesquisa, ajuda, entrar/cadastro, seções ("explore mais")
+  RF-05 Quiz inicial .............. Quiz do Blue (pontuação 0–100 salva para estudante)
+  RF-06 Avaliação ................. estrelas de 1 a 5 no detalhe (trigger trg_valida_nota)
+  RF-07 Feedback/correção ......... junto da avaliação; só a equipe lê (aba Feedbacks do admin)
+  RF-08 Ajuda ..................... "?" no topo e "Fale com a equipe" no rodapé:
+                                    Tchê Bot (agente de IA, responde na hora com o acervo) ou
+                                    atendente humano; a mensagem fica pendente, o administrador
+                                    responde em Painel Admin > Atendimentos e a resposta aparece
+                                    na conversa e em "Minhas mensagens" (perfil)
+  RF-09 Favoritos ................. coração nos cards e no detalhe; lista no perfil
+  RF-10/12/14 Mapas, materiais e links ... "Materiais e links complementares" no detalhe
+                                    + botão "Ver no Google Maps" nos pontos turísticos
+  RF-11/13 Atividades ............. "Fazer atividade" no detalhe. São três jogos, todos
+                                    sorteados e corrigidos no servidor (o gabarito não vai
+                                    para o navegador):
+                                    · quiz ............ 5 perguntas do acervo
+                                    · jogo da memória . 12 cartas; casa conteúdo com estado
+                                    · quebra-cabeça ... mosaico 3x3 remontado peça por peça
+                                    Pontuação de 0 a 100 gravada em tentativa (estudante)
+  RF-15 Criar atividade ........... "Área do docente" no detalhe (só docente)
+  RF-16/17 Contribuir ............. docente e pesquisador; rascunho ou envio para moderação
+                                    (procedure sp_registrar_contribuicao)
+  RF-18 Anexar material ........... "Área do docente" no detalhe: envia um arquivo do
+                                    computador (PDF, Word, PowerPoint, imagem, áudio ou vídeo,
+                                    até 10 MB, gravado em arquivos/materiais) OU informa um link
+  RF-19 Referências ............... obrigatórias para pesquisador
+  RF-20 Artigo acadêmico .......... categoria só para pesquisador; seção "Artigos Acadêmicos";
+                                    "Ler artigo completo" abre o artigo dentro do site e, se o
+                                    PDF estiver na pasta arquivos/, também dá para baixar
+  RF-21 Texto técnico ............. aparece só para docente, pesquisador e administrador;
+                                    o perfil do pesquisador lista o que é da linha de pesquisa
+  RF-22 Cadastro e perfil ......... cadastro em 3 etapas (senha em bcrypt) e "Meu perfil"
+  RF-23 Aprovar/rejeitar .......... Painel Admin > Moderação (rejeição exige motivo)
+  RF-24 Editar na moderação ....... "Editar antes de aprovar" (sp_editar_conteudo_moderacao)
+  RF-25 Relatórios e estatísticas . Painel Admin > Relatório por período / Estatísticas
+  RF-26 Gerenciar feedbacks ....... Painel Admin > Feedbacks ("marcar analisado")
+  RNF-01/02 Acessibilidade ........ barra no topo: A− A A+ e alto contraste; "pular para o
+                                    conteúdo", foco visível, navegação por teclado
+  RNF-04 Segurança ................ senha em bcrypt; perfil público só com nome abreviado
+                                    (vw_perfil_publico); consultas com parâmetros (PDO)
+
+OBJETOS DO BANCO USADOS PELO SITE
+  Views:      vw_movimento_por_estado (Acervo em Números), vw_perfil_publico (avaliações e
+              ranking), vw_tipos_culturais_frequentes (estatísticas do admin)
+  Functions:  fn_classificar_atualidade (selo Atual/Desatualizado), fn_total_contribuicoes_usuario
+  Procedures: sp_registrar_contribuicao, sp_revisar_contribuicao,
+              sp_editar_conteudo_moderacao, sp_relatorio_conteudos_periodo
+  Trigger:    trg_valida_nota
+
+IMAGENS E ARQUIVOS
+  O site confere se o arquivo citado pelo banco existe na pasta antes de mostrar o botão ou a
+  foto, então nunca aparece link quebrado. Quando um ponto turístico não tem foto, o próprio
+  site desenha uma arte com as cores da região (é ela que vira o quebra-cabeça).

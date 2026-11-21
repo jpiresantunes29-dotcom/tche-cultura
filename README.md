@@ -1,24 +1,24 @@
-# 🎵 Tchê & Cultura — Conheça o Brasil por dentro
+# Tchê & Cultura — Conheça o Brasil por dentro
 
 <p align="center">
   <strong>Plataforma de difusão da diversidade cultural das cinco regiões do Brasil</strong>
 </p>
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 **Tchê & Cultura** é uma plataforma educacional interativa desenvolvida como projeto acadêmico do curso de Engenharia de Software da PUCPR (Grupo 5). A plataforma apresenta a riqueza cultural brasileira através de um mapa interativo, pontos turísticos, músicas regionais, jogos educativos e um chatbot cultural.
 
-### ✨ Funcionalidades
+### Funcionalidades
 
-- 🗺️ **Mapa Interativo** — Navegue pelas 5 regiões do Brasil
-- 🏛️ **Pontos Turísticos** — 8 destinos icônicos com descrições e imagens
-- 🎶 **Músicas Regionais** — 7 gêneros musicais com letras completas
-- 🧩 **Jogos Educativos** — Quiz cultural e quebra-cabeça interativo
-- 🤖 **Tchê Bot** — Chatbot com base de conhecimento cultural
-- 👤 **Sistema de Usuários** — Cadastro, login, ranking e favoritos
-- ♿ **Acessibilidade** — Alto contraste, ajuste de fonte, navegação por teclado
+- **Mapa Interativo** — Navegue pelas 5 regiões do Brasil
+- **Pontos Turísticos** — 8 destinos icônicos com descrições e imagens
+- **Músicas Regionais** — 7 gêneros musicais com letras completas
+- **Jogos Educativos** — Quiz cultural e quebra-cabeça interativo
+- **Tchê Bot** — Chatbot com base de conhecimento cultural
+- **Sistema de Usuários** — Cadastro, login, ranking e favoritos
+- **Acessibilidade** — Alto contraste, ajuste de fonte, navegação por teclado
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Requisitos
 - **XAMPP** (ou equivalente) com PHP 8+ e MySQL 8+
@@ -49,7 +49,7 @@
 A pasta `docs/` contém uma versão estática do site que funciona sem backend.
 Acesse em: **https://jpiresantunes29-dotcom.github.io/tche-cultura/**
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 ├── 01 Briefing e Backlog/      # Documentação inicial e product backlog
@@ -67,7 +67,7 @@ Acesse em: **https://jpiresantunes29-dotcom.github.io/tche-cultura/**
 └── docs/                        # Versão estática (GitHub Pages)
 ```
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Backend:** PHP 8 (arquivo único, 31 endpoints de API)
 - **Banco de Dados:** MySQL 8 (PDO, bcrypt cost 10)
@@ -75,12 +75,12 @@ Acesse em: **https://jpiresantunes29-dotcom.github.io/tche-cultura/**
 - **Mapa:** D3.js com GeoJSON do Brasil
 - **Autenticação:** JWT-like com bcrypt
 
-## 👥 Grupo 5 — PUCPR
+## Grupo 5 — PUCPR
 
 Projeto desenvolvido para a disciplina de Engenharia de Software.
 
 ---
 
 <p align="center">
-  <em>Feito com ❤️ para valorizar a cultura brasileira</em>
+  <em>Feito com dedicação para valorizar a cultura brasileira</em>
 </p>

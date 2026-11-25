@@ -24,20 +24,54 @@ Você vai precisar de um programa chamado **XAMPP**. Ele faz o computador funcio
 
 No fim, deve existir: `C:\xampp\htdocs\tche\index.php`
 
-## Passo 4 — Ligar o servidor
+## Passo 4 — Ligar o servidor (detalhado)
 
-1. Abra o **XAMPP Control Panel**.
-2. Clique em **Start** ao lado de **Apache**.
-3. Clique em **Start** ao lado de **MySQL**.
-4. Os dois devem ficar com fundo **verde**.
+O site só abre se o servidor estiver ligado. Pense assim: o **Apache** mostra o site e o **MySQL** guarda as informações. Os dois precisam estar ligados.
 
-## Passo 5 — Abrir o site
+1. Aperte a tecla **Windows** do teclado e digite **XAMPP**.
+2. Clique em **XAMPP Control Panel** para abrir.
+   - Se o Windows perguntar "Deseja permitir que este aplicativo faça alterações?", clique em **Sim**.
+3. Vai aparecer uma janela com uma lista de nomes (Apache, MySQL, FileZilla...). Você só vai usar dois.
+4. Na linha do **Apache**, clique no botão **Start**.
+   - Se der certo, o nome **Apache** fica com fundo **verde** e o botão muda para **Stop**.
+5. Na linha do **MySQL**, clique no botão **Start**.
+   - Se der certo, o nome **MySQL** fica com fundo **verde** e o botão muda para **Stop**.
+6. Confira: **Apache** e **MySQL** com fundo verde. Pronto!
 
-1. Abra o navegador (Chrome, Edge, etc.).
-2. Digite: **http://localhost/tche/**
-3. Na primeira vez vai aparecer a mensagem **"Banco de dados não instalado"**.
-4. Clique no botão **Instalar banco de dados** e espere terminar.
-5. Pronto, o site abre!
+**Não feche a janela do XAMPP** enquanto estiver usando o site. Pode minimizar.
+
+**Se algum não ficar verde:**
+- Apareceu um aviso em vermelho dizendo que a **porta está em uso**? Outro programa está ocupando o espaço. Feche programas como Skype, Zoom ou outro servidor e tente de novo.
+- Ainda não ligou? Reinicie o computador, abra o XAMPP de novo e clique em **Start**.
+
+---
+
+## Passo 5 — Abrir o site (detalhado)
+
+1. Abra o navegador (Chrome, Edge ou Firefox).
+2. Clique na barra de endereço lá em cima (onde você digita o site).
+3. Digite exatamente isto e aperte **Enter**:
+
+```
+http://localhost/tche/
+```
+
+4. Na primeira vez, vai aparecer a mensagem **"Banco de dados não instalado"**. Isso é normal!
+5. Clique no botão **Instalar banco de dados**.
+6. Espere alguns segundos. Não feche a página.
+7. Quando terminar, o site aparece com o **mapa do Brasil**. Pronto!
+
+**Das próximas vezes**, é só ligar o Apache e o MySQL (Passo 4) e abrir `http://localhost/tche/`. Não precisa instalar o banco de novo.
+
+**Para entrar com uma conta:**
+1. Clique em **Entrar** no topo do site.
+2. E-mail: `admin@email.com`
+3. Senha: `Tche@2026`
+
+**Se não abrir:**
+- Apareceu "Não é possível acessar esse site"? Volte no XAMPP e veja se o **Apache** está verde.
+- Apareceu "Not Found" (não encontrado)? A pasta está com o nome errado. Ela precisa se chamar **tche** e estar dentro de `C:\xampp\htdocs`.
+- Apareceu erro de banco de dados? Veja se o **MySQL** está verde no XAMPP.
 
 ---
 

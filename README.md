@@ -32,6 +32,8 @@ A plataforma foi desenvolvida como projeto acadêmico para o curso de Engenharia
 
 ## Como Executar
 
+> **Quer o passo a passo em linguagem simples?** Veja o [COMO-RODAR.md](COMO-RODAR.md).
+
 ### Requisitos
 
 - XAMPP, WAMP ou servidor equivalente com PHP e MySQL

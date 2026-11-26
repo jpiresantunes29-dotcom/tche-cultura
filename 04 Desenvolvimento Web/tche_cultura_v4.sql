@@ -11,7 +11,7 @@
 -- =====================================================================================
 
 DROP DATABASE IF EXISTS tche_cultura;
-CREATE DATABASE tche_cultura CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE tche_cultura CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE tche_cultura;
 
 -- =====================================================================================

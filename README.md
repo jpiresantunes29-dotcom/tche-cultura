@@ -25,10 +25,11 @@ A plataforma foi desenvolvida como projeto acadêmico para o curso de Engenharia
 
 ## Tecnologias Utilizadas
 
-- **Backend:** PHP 8
-- **Banco de Dados:** MySQL 8
-- **Frontend:** HTML5, JavaScript, Tailwind CSS
-- **Mapa:** D3.js
+- **Backend:** PHP 8 com PDO (`declare(strict_types=1)`), em arquivo único (`index.php`)
+- **Banco de Dados:** MySQL 8 ou MariaDB 10.4+ — 30 tabelas, 4 views, 2 functions, 1 trigger e 4 procedures
+- **Frontend:** HTML5 e JavaScript puro, sem framework
+- **Estilo:** Tailwind CSS (compilado em `tailwind.css`)
+- **Mapa:** SVG montado pelo próprio JavaScript a partir de `mapa_brasil.json` — sem biblioteca de gráficos
 
 ## Como Executar
 
@@ -48,23 +49,35 @@ A plataforma foi desenvolvida como projeto acadêmico para o curso de Engenharia
    - Depois importe `atualizar_conteudo.sql`
 5. Acesse pelo navegador (ex: `http://localhost/tche/`)
 
-> **Dica:** ao acessar o site pela primeira vez sem o banco instalado, a própria interface oferece um botão para instalar o banco automaticamente.
+> **Dica:** ao acessar o site pela primeira vez sem o banco instalado, a própria interface oferece um botão para instalar o banco automaticamente. Ele já executa os dois scripts na ordem certa.
+
+> **Sobre o banco:** o script usa a colação `utf8mb4_unicode_ci`, que funciona tanto no MySQL 8 quanto no MariaDB que vem com o XAMPP. As restrições `CHECK` exigem MySQL 8.0.16 ou MariaDB 10.4 em diante.
 
 ### Usuários de Teste
 
-| E-mail | Senha | Papel |
-|--------|-------|-------|
-| admin@email.com | Tche@2026 | Administrador |
-| ana@email.com | Tche@2026 | Usuário comum |
-| carlos@email.com | Tche@2026 | Usuário comum |
-| marta@email.com | Tche@2026 | Usuário comum |
-| joana@email.com | Tche@2026 | Usuário comum |
+Todas usam a senha `Tche@2026`. Cada perfil enxerga recursos diferentes.
+
+| E-mail | Perfil | O que esse perfil pode fazer |
+|--------|--------|------------------------------|
+| admin@email.com | Administrador | Painel completo: moderação, estatísticas, relatórios, feedbacks e atendimentos |
+| ana@email.com | Estudante | Fazer as atividades e guardar a pontuação no perfil |
+| carlos@email.com | Docente | Ver o texto técnico, criar atividades, anexar materiais e contribuir |
+| marta@email.com | Pesquisadora | Contribuir, incluindo artigos acadêmicos com referências |
+| joana@email.com | Público em geral | Favoritar e avaliar conteúdos |
 
 ### Versão Online (GitHub Pages)
 
 Uma versão simplificada do site, sem banco de dados, está disponível online:
 
 **https://jpiresantunes29-dotcom.github.io/tche-cultura/**
+
+## Vídeo de Apresentação
+
+Demonstração completa do site, com narração dos cinco integrantes do grupo e legendas (5min24):
+
+**[`entrega/Video de apresentacao.mp4`](entrega/)**
+
+O vídeo percorre o site inteiro: mapa e acervo como visitante, cadastro e os quatro perfis, as atividades do estudante, as contribuições de docente e pesquisadora, e o painel do administrador aprovando uma contribuição que passa a aparecer no mapa.
 
 ## Estrutura do Repositório
 
@@ -86,7 +99,9 @@ tche-cultura/
 │   ├── imagens/                        # Fotos dos pontos turísticos
 │   └── arquivos/                       # Artigos em PDF
 ├── 05 Conferencia e Ferramentas/       # Ferramentas de apoio
+├── entrega/                            # Vídeo de apresentação e export do banco
 ├── docs/                               # Versão online (GitHub Pages)
+├── COMO-RODAR.md                       # Passo a passo em linguagem simples
 └── README.md
 ```
 

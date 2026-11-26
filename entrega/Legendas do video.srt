@@ -1,0 +1,239 @@
+1
+00:00:00,236 --> 00:00:04,759
+Olá, meu nome é Letícia e eu estou apresentando aqui o nosso sistema, chamado Tchê & Cultura,
+
+2
+00:00:04,789 --> 00:00:11,846
+e o grupo compõe eu, João Pedro Pires, Eduardo Yonegura, Guilherme Sakagami e Carlos Eduardo.
+
+3
+00:00:11,876 --> 00:00:18,822
+Primeiro, falando um pouco sobre a nossa interface web: nós temos aqui um mapa que reúne diferentes regiões,
+
+4
+00:00:18,852 --> 00:00:21,985
+com diversas áreas culturais de cada uma dessas regiões.
+
+5
+00:00:22,015 --> 00:00:27,108
+Ele foi desenvolvido por JavaScript e, passando por cima com o mouse e o cursor,
+
+6
+00:00:27,138 --> 00:00:32,231
+nós podemos acessar essas regiões e as informações de cada uma delas.
+
+7
+00:00:32,261 --> 00:00:37,312
+Também podemos abrir essas categorias e acessar o conteúdo daquele lugar, daquela região.
+
+8
+00:00:37,342 --> 00:00:42,434
+Cada estado tem culinária, música, literatura, turismo e mais informações sobre ele.
+
+9
+00:00:42,464 --> 00:00:47,557
+A ficha traz imagens, textos, ingredientes, receitas e avaliações,
+
+10
+00:00:47,587 --> 00:00:51,699
+expondo um pouco mais sobre aquela categoria escolhida.
+
+11
+00:00:51,729 --> 00:00:58,781
+Nós também temos a área de pesquisa, que é buscada por tema, título, estado, autor,
+
+12
+00:00:58,811 --> 00:01:04,883
+ou também nós temos o Quiz do Blue, que fica aparente para qualquer pessoa que queira acessar o site.
+
+13
+00:01:04,913 --> 00:01:08,363
+Ele pode testar o conhecimento que já tem sobre o Brasil.
+
+14
+00:01:11,093 --> 00:01:15,204
+No topo nós temos recursos de acessibilidade, como tamanho da fonte e alto contraste,
+
+15
+00:01:15,234 --> 00:01:21,307
+e abaixo do mapa também nós temos seções como lendas, festas, turismo, expressões, nomes e artigos,
+
+16
+00:01:21,337 --> 00:01:24,273
+além dos números do acervo.
+
+17
+00:01:24,303 --> 00:01:29,953
+Para participar, a pessoa faz o cadastro em três etapas: dados pessoais, perfil e dados do perfil.
+
+18
+00:01:31,131 --> 00:01:38,136
+O cadastro oferece quatro perfis: estudante, docente, pesquisador e público em geral, cada um com suas permissões diferentes.
+
+19
+00:01:38,166 --> 00:01:44,024
+A senha é guardada criptografada, com bcrypt, e o banco nunca guarda a senha em texto.
+
+20
+00:01:44,054 --> 00:01:49,910
+Concluído o cadastro, a pessoa já entra logada, com o perfil que mostra favoritos, tentativas e mensagens.
+
+21
+00:01:49,940 --> 00:01:54,370
+Entrando como público em geral, é possível favoritar os conteúdos que a pessoa mais gostou.
+
+22
+00:01:59,472 --> 00:02:02,559
+E também avaliar, dando uma nota de um a cinco.
+
+23
+00:02:02,589 --> 00:02:05,720
+Um gatilho no banco confere essa nota antes de gravar.
+
+24
+00:02:05,750 --> 00:02:12,715
+O comentário vira um feedback, que a equipe lê depois no painel de administrador.
+
+25
+00:02:12,745 --> 00:02:15,535
+Em caso de dúvida, a Central de Ajuda
+
+26
+00:02:15,565 --> 00:02:20,265
+tem o Tchê Bot, que responde na hora a partir do acervo.
+
+27
+00:02:20,295 --> 00:02:23,336
+Se preferir, escolhe o atendente da equipe.
+
+28
+00:02:23,366 --> 00:02:28,116
+A mensagem fica na fila e o administrador responde depois.
+
+29
+00:02:28,212 --> 00:02:34,122
+A estudante entra com o login dela e vê, no perfil dela, favoritos, tentativas, atividades e mensagens.
+
+30
+00:02:36,054 --> 00:02:41,394
+Os conteúdos podem ter atividades, que têm jogo da memória e quebra-cabeça.
+
+31
+00:02:42,162 --> 00:02:45,292
+No jogo da memória, casamos cada conteúdo cultural com o estado de onde ele vem.
+
+32
+00:02:45,322 --> 00:02:48,453
+As cartas são sorteadas pelo servidor a cada partida.
+
+33
+00:02:48,483 --> 00:02:53,533
+Quando erramos, o site conta o erro e fecha as cartas de novo.
+
+34
+00:02:59,477 --> 00:03:02,927
+A pontuação é calculada no servidor e fica guardada no perfil do estudante.
+
+35
+00:03:03,579 --> 00:03:09,349
+No quebra-cabeça, trocamos as peças de lugar até a imagem ficar igual à referência.
+
+36
+00:03:14,625 --> 00:03:19,373
+A nota aqui depende do número de movimentos: quanto menor, melhor.
+
+37
+00:03:19,403 --> 00:03:24,603
+Também há quizzes de múltipla escolha, com as perguntas vindas do banco de dados.
+
+38
+00:03:25,663 --> 00:03:30,213
+O gabarito fica guardado na sessão do servidor, então a resposta não aparece no código da página.
+
+39
+00:03:33,846 --> 00:03:39,476
+O docente tem recursos a mais. Ele enxerga o texto técnico, que fica escondido para os outros perfis.
+
+40
+00:03:44,643 --> 00:03:48,133
+Na área do docente, ele cria atividades novas para aquele conteúdo.
+
+41
+00:03:48,297 --> 00:03:51,388
+A atividade aparece na hora na ficha, pronta para os estudantes jogarem.
+
+42
+00:03:51,418 --> 00:03:57,358
+Ele também anexa material de apoio: um PDF, uma imagem, um vídeo ou um link externo.
+
+43
+00:03:57,388 --> 00:04:00,818
+Docentes e pesquisadores também propõem conteúdos novos para o acervo.
+
+44
+00:04:01,711 --> 00:04:05,421
+O envio roda dentro de uma transação no banco.
+
+45
+00:04:06,574 --> 00:04:13,106
+Ou grava tudo, ou não grava nada. A contribuição fica com situação pendente e ainda não aparece no site.
+
+46
+00:04:13,136 --> 00:04:17,806
+A pesquisadora faz o mesmo, e ainda pode enviar artigos acadêmicos.
+
+47
+00:04:23,709 --> 00:04:28,139
+Para ela, as referências são obrigatórias, porque o artigo precisa ter fonte.
+
+48
+00:04:28,940 --> 00:04:33,796
+Tudo isso fica registrado no perfil de quem enviou, com a situação de cada contribuição.
+
+49
+00:04:33,826 --> 00:04:37,566
+O administrador tem um painel próprio, com cinco abas.
+
+50
+00:04:40,807 --> 00:04:45,340
+Na moderação, ele vê as contribuições pendentes antes delas irem para o site.
+
+51
+00:04:45,370 --> 00:04:48,001
+Antes de aprovar, ele pode corrigir o texto.
+
+52
+00:04:48,031 --> 00:04:50,624
+O banco registra quem editou.
+
+53
+00:04:50,654 --> 00:04:54,119
+Aprovada, a contribuição passa a aparecer para todo mundo.
+
+54
+00:04:54,149 --> 00:04:56,949
+Rejeitada, o autor vê o motivo.
+
+55
+00:04:57,475 --> 00:05:01,990
+As estatísticas mostram acessos, contribuições e avaliações do acervo.
+
+56
+00:05:02,020 --> 00:05:06,435
+O relatório por período chama uma procedure guardada no banco de dados.
+
+57
+00:05:06,465 --> 00:05:09,901
+Nos feedbacks, a equipe marca o que já foi analisado.
+
+58
+00:05:09,931 --> 00:05:14,591
+E nos atendimentos, a equipe responde as mensagens que ficaram na fila.
+
+59
+00:05:15,477 --> 00:05:18,608
+Pronto, o conteúdo aprovado já aparece no mapa.
+
+60
+00:05:18,638 --> 00:05:22,188
+O Vatapá agora está na culinária da Bahia.

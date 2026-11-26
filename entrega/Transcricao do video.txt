@@ -1,0 +1,75 @@
+TRANSCRIÇÃO FINAL — Tchê & Cultura
+O que cada um falou, já corrigido, com o tempo no vídeo.
+
+
+--- BLOCO 1 — Letícia ---
+[0:00] Olá, meu nome é Letícia e eu estou apresentando aqui o nosso sistema, chamado Tchê & Cultura,
+[0:04] e o grupo compõe eu, João Pedro Pires, Eduardo Yonegura, Guilherme Sakagami e Carlos Eduardo.
+[0:11] Primeiro, falando um pouco sobre a nossa interface web: nós temos aqui um mapa que reúne diferentes regiões,
+[0:18] com diversas áreas culturais de cada uma dessas regiões.
+[0:22] Ele foi desenvolvido por JavaScript e, passando por cima com o mouse e o cursor,
+[0:27] nós podemos acessar essas regiões e as informações de cada uma delas.
+[0:32] Também podemos abrir essas categorias e acessar o conteúdo daquele lugar, daquela região.
+[0:37] Cada estado tem culinária, música, literatura, turismo e mais informações sobre ele.
+[0:42] A ficha traz imagens, textos, ingredientes, receitas e avaliações,
+[0:47] expondo um pouco mais sobre aquela categoria escolhida.
+[0:51] Nós também temos a área de pesquisa, que é buscada por tema, título, estado, autor,
+[0:58] ou também nós temos o Quiz do Blue, que fica aparente para qualquer pessoa que queira acessar o site.
+[1:04] Ele pode testar o conhecimento que já tem sobre o Brasil.
+[1:11] No topo nós temos recursos de acessibilidade, como tamanho da fonte e alto contraste,
+[1:15] e abaixo do mapa também nós temos seções como lendas, festas, turismo, expressões, nomes e artigos,
+[1:21] além dos números do acervo.
+
+--- BLOCO 2 — João Pedro ---
+[1:24] Para participar, a pessoa faz o cadastro em três etapas: dados pessoais, perfil e dados do perfil.
+[1:31] O cadastro oferece quatro perfis: estudante, docente, pesquisador e público em geral, cada um com suas permissões diferentes.
+[1:38] A senha é guardada criptografada, com bcrypt, e o banco nunca guarda a senha em texto.
+[1:44] Concluído o cadastro, a pessoa já entra logada, com o perfil que mostra favoritos, tentativas e mensagens.
+[1:49] Entrando como público em geral, é possível favoritar os conteúdos que a pessoa mais gostou.
+[1:59] E também avaliar, dando uma nota de um a cinco.
+[2:02] Um gatilho no banco confere essa nota antes de gravar.
+[2:05] O comentário vira um feedback, que a equipe lê depois no painel de administrador.
+[2:12] Em caso de dúvida, a Central de Ajuda
+[2:15] tem o Tchê Bot, que responde na hora a partir do acervo.
+[2:20] Se preferir, escolhe o atendente da equipe.
+[2:23] A mensagem fica na fila e o administrador responde depois.
+
+--- BLOCO 3 — Guilherme ---
+[2:28] A estudante entra com o login dela e vê, no perfil dela, favoritos, tentativas, atividades e mensagens.
+[2:36] Os conteúdos podem ter atividades, que têm jogo da memória e quebra-cabeça.
+[2:42] No jogo da memória, casamos cada conteúdo cultural com o estado de onde ele vem.
+[2:45] As cartas são sorteadas pelo servidor a cada partida.
+[2:48] Quando erramos, o site conta o erro e fecha as cartas de novo.
+[2:59] A pontuação é calculada no servidor e fica guardada no perfil do estudante.
+[3:03] No quebra-cabeça, trocamos as peças de lugar até a imagem ficar igual à referência.
+[3:14] A nota aqui depende do número de movimentos: quanto menor, melhor.
+[3:19] Também há quizzes de múltipla escolha, com as perguntas vindas do banco de dados.
+[3:25] O gabarito fica guardado na sessão do servidor, então a resposta não aparece no código da página.
+
+--- BLOCO 4 — Eduardo ---
+[3:33] O docente tem recursos a mais. Ele enxerga o texto técnico, que fica escondido para os outros perfis.
+[3:44] Na área do docente, ele cria atividades novas para aquele conteúdo.
+[3:48] A atividade aparece na hora na ficha, pronta para os estudantes jogarem.
+[3:51] Ele também anexa material de apoio: um PDF, uma imagem, um vídeo ou um link externo.
+[3:57] Docentes e pesquisadores também propõem conteúdos novos para o acervo.
+[4:01] O envio roda dentro de uma transação no banco.
+[4:06] Ou grava tudo, ou não grava nada. A contribuição fica com situação pendente e ainda não aparece no site.
+[4:13] A pesquisadora faz o mesmo, e ainda pode enviar artigos acadêmicos.
+[4:23] Para ela, as referências são obrigatórias, porque o artigo precisa ter fonte.
+[4:28] Tudo isso fica registrado no perfil de quem enviou, com a situação de cada contribuição.
+
+--- BLOCO 5 — Carlos ---
+[4:33] O administrador tem um painel próprio, com cinco abas.
+[4:40] Na moderação, ele vê as contribuições pendentes antes delas irem para o site.
+[4:45] Antes de aprovar, ele pode corrigir o texto.
+[4:48] O banco registra quem editou.
+[4:50] Aprovada, a contribuição passa a aparecer para todo mundo.
+[4:54] Rejeitada, o autor vê o motivo.
+[4:57] As estatísticas mostram acessos, contribuições e avaliações do acervo.
+[5:02] O relatório por período chama uma procedure guardada no banco de dados.
+[5:06] Nos feedbacks, a equipe marca o que já foi analisado.
+[5:09] E nos atendimentos, a equipe responde as mensagens que ficaram na fila.
+[5:15] Pronto, o conteúdo aprovado já aparece no mapa.
+[5:18] O Vatapá agora está na culinária da Bahia.
+
+TOTAL: 5:24

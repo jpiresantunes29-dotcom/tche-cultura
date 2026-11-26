@@ -38,7 +38,8 @@ O QUE O SITE FAZ NA v4.3 (para bater com os Casos de Teste v2.0)
 
 COMO RODAR (XAMPP)
   1. Copie esta pasta inteira para C:\xampp\htdocs\tche (index.php + tche_cultura_v4.sql).
-  2. No painel do XAMPP, ligue Apache e MySQL (MySQL 8.0.16 ou mais novo, por causa dos CHECK).
+  2. No painel do XAMPP, ligue Apache e MySQL. Serve o MySQL 8.0.16 ou mais novo, ou o
+     MariaDB 10.4 ou mais novo que vem no XAMPP. A versao minima e por causa dos CHECK.
   3. Abra http://localhost/tche/
   4. Na primeira vez, o site mostra "Banco de dados não instalado". Clique em
      "Instalar banco de dados": ele roda as seções 1 a 5 do script (estrutura, dados,
